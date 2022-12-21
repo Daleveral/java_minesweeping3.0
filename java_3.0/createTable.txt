@@ -1,0 +1,20 @@
+CREATE TABLE `minesweeping` (
+  `日期` date DEFAULT NULL,
+  `此日第几次` int DEFAULT NULL,
+  `难度` varchar(10) DEFAULT NULL,
+  `游戏结果` varchar(10) DEFAULT NULL,
+  `历时` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ;
+
+
+
+上面是创建数据库的语句,而建立后,你要手动存放至少两条记录到上面去 ... 
+例如 : 
+
+INSERT INTO test_database.minesweeping (日期, 此日第几次, 难度, 游戏结果, 历时)
+VALUES ('2022-12-19', 1, '困难', '胜利', '00:07:42');
+
+INSERT INTO test_database.minesweeping (日期, 此日第几次, 难度, 游戏结果, 历时)
+VALUES ('2022-12-19', 2, '普通', '胜利', '00:02:24');
+
+当然等你成功记录至少两条游戏内容后,可以把初始的这两条删除掉,这样就不会干扰你的统计了
